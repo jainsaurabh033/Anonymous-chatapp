@@ -15,7 +15,7 @@ const Password = () => {
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
-      password: "admin@123",
+      password: "",
     },
     validate: passwordValidate,
     validateOnBlur: false,
@@ -79,7 +79,7 @@ const Password = () => {
             <div className="text-center py-4">
               <span className="text-gray-500">
                 Forget Password?
-                <Link className="text-red-500" to="/recovery">
+                <Link className={styles.link} to="/recovery">
                   Recover Now
                 </Link>
               </span>

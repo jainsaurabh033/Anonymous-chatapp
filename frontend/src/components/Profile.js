@@ -137,7 +137,7 @@ const Profile = () => {
             <div className="text-center py-4">
               <span className="text-gray-500">
                 come back later?
-                <button onClick={userLogout} className="text-red-500" to="/">
+                <button onClick={userLogout} className={styles.link} to="/">
                   Logout
                 </button>
               </span>

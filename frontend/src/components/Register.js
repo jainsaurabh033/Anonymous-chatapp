@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import avatar from "../assets/profile.png";
-import styles from "../styles/Username.module.css";
+import styles from "../styles/Register.module.css";
 import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import { registerValidation } from "../helper/validate";
@@ -14,9 +14,9 @@ const Register = () => {
 
   const formik = useFormik({
     initialValues: {
-      email: "doyol33@gmail.com",
-      username: "example123",
-      password: "admin@123",
+      email: "",
+      username: "",
+      password: "",
     },
     validate: registerValidation,
     validateOnBlur: false,
@@ -76,19 +76,19 @@ const Register = () => {
                 {...formik.getFieldProps("email")}
                 className={styles.textbox}
                 type="text"
-                placeholder="Email*"
+                placeholder="Email"
               />
               <input
                 {...formik.getFieldProps("username")}
                 className={styles.textbox}
                 type="text"
-                placeholder="Username*"
+                placeholder="Username"
               />
               <input
                 {...formik.getFieldProps("password")}
                 className={styles.textbox}
                 type="text"
-                placeholder="Password*"
+                placeholder="Password"
               />
               <button className={styles.btn} type="submit">
                 Register
@@ -98,7 +98,7 @@ const Register = () => {
             <div className="text-center py-4">
               <span className="text-gray-500">
                 Already Register?
-                <Link className="text-red-500" to="/">
+                <Link className={styles.link} to="/">
                   Login Now
                 </Link>
               </span>

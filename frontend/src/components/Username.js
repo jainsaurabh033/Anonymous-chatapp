@@ -54,8 +54,8 @@ const Username = () => {
 
             <div className="text-center py-4">
               <span className="text-gray-500">
-                Not a member
-                <Link className="text-red-500" to="/register">
+                Not a member?
+                <Link className={styles.link} to="/register">
                   Register Now
                 </Link>
               </span>
