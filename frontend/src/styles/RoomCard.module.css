@@ -1,0 +1,25 @@
+.card {
+  background: #1d1d1d;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.image {
+  border-radius: 20px;
+}
+
+.topic {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.description {
+  word-break: break-all;
+}
+
+.peopleCount {
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+}

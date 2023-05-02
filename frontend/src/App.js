@@ -10,6 +10,8 @@ import Profile from "./components/Profile";
 import Recovery from "./components/Recovery";
 import PageNotFound from "./components/PageNotFound";
 import Reset from "./components/Reset";
+import Rooms from "./components/Rooms";
+import Room from "./components/Room";
 
 // auth middleware
 
@@ -47,6 +49,22 @@ const router = createBrowserRouter([
   {
     path: "/reset",
     element: <Reset></Reset>,
+  },
+  {
+    path: "/rooms",
+    element: (
+      <AuthorizeUser>
+        <Rooms />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/room/:id",
+    element: (
+      <AuthorizeUser>
+        <Room />
+      </AuthorizeUser>
+    ),
   },
   {
     path: "*",

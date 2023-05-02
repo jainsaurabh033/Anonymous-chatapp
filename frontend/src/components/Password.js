@@ -33,7 +33,7 @@ const Password = () => {
       loginPromise.then((res) => {
         let { token } = res.data;
         localStorage.setItem("token", token);
-        navigate("/profile");
+        navigate("/rooms");
       });
     },
   });
@@ -68,7 +68,7 @@ const Password = () => {
               <input
                 {...formik.getFieldProps("password")}
                 className={styles.textbox}
-                type="text"
+                type="password"
                 placeholder="Password"
               />
               <button className={styles.btn} type="submit">
